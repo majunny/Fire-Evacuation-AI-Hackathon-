@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var arrowImageView: ImageView
     private lateinit var directionTextView: TextView
 
-    private val pcLanUrl = "ws://192.168.129.53:8765"
+    private val pcLanUrl = "ws://192.168.129.53:8765"  //<-여기에 있는 ip주소를 현재 와이파이에 맞게 바꿔야함(컴퓨터랑 폰이랑 같은 와이파이 사용할것)(예:ws://xxx.xxx.xx.xx:8765)
     private val emulatorUrl = "ws://10.0.2.2:8765"
 
     // Sensor related variables

@@ -40,7 +40,7 @@ screen = pygame.display.set_mode((W, H + 40))
 clock = pygame.time.Clock()
 font = pygame.font.SysFont("Arial", 16)
 
-# ---------- auto_replan function (same as before) ----------
+# ------------------------- auto_replan function (same as before) -------------
 def auto_replan(blocked, agent_pos, goals, escapes, fire_cells, planner, ROWS, COLS):
     best_target, best_len = find_best_target(blocked, agent_pos, goals, escapes, ROWS, COLS, fire_cells)
     
@@ -58,7 +58,7 @@ def auto_replan(blocked, agent_pos, goals, escapes, fire_cells, planner, ROWS, C
         
     return None, None, None
 
-def reset_all(map_filepath='mainmap.json'):
+def reset_all(map_filepath='fireescape/mainmap.json'):
     blocked, start, goals, escapes = load_map_from_json(map_filepath)
 
     if blocked is None:
@@ -93,7 +93,7 @@ def main():
 
     # ===== YOLO and webcam initialization =====
     try:
-        yolo_model = YOLO("last.pt")
+        yolo_model = YOLO("fireescape/last.pt")
         cap = cv2.VideoCapture(0)
         if not cap.isOpened():
             raise IOError("웹캠을 열 수 없습니다.")

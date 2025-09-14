@@ -274,6 +274,10 @@ def main():
                         redo()
                     elif event.key == pygame.K_s and pygame.key.get_mods() & pygame.KMOD_CTRL:
                         input_mode = 'save'
+                    elif event.key == pygame.K_s:
+                        input_mode = 'save'
+                    elif event.key == pygame.K_s and (pygame.key.get_mods() & (pygame.KMOD_CTRL | pygame.KMOD_META)):
+                        input_mode = 'save'
                     elif event.key == pygame.K_l and pygame.key.get_mods() & pygame.KMOD_CTRL:
                         input_mode = 'load'
                     elif event.key == pygame.K_p: # P 키를 눌러 프리셋 벽을 로드
